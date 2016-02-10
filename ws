@@ -23,6 +23,11 @@ if [[ "$@" ]] ; then
 	WORDS=$(echo "$@" | sed -e 's/ /+/g')
 	w3m https://duckduckgo.com/?q=$WORDS
 	;;
+    -dogpile|-p)
+	shift
+	WORDS=$(echo "$@" | sed -e 's/ /+/g')
+	w3m https://duckduckgo.com/?q=$WORDS
+	;;
     -startpage|-s)
 	shift
 	WORDS=$(echo "$@" | sed -e 's/ /+/g')
